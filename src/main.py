@@ -128,15 +128,15 @@ print(a - b)
 # 5
 # 65 90 75 34 99
 
-n = int(input())
-print(n)
+# n = int(input())
+# print(n)
 
-array = list(map(int, input().split()))
-print(array)
-
-
+# array = list(map(int, input().split()))
+# print(array)
 
 
-end_time = time.time()
-print("time: ", end_time - start_time)
+
+
+# end_time = time.time()
+# print("time: ", end_time - start_time)
 
