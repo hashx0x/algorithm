@@ -1,0 +1,2 @@
+typedef enum ACTION { MOVE = 100, JUMP, ATTACK, QUIT } ACTION;
+
