@@ -71,7 +71,7 @@ vector<string> solution(vector<vector<string>> tickets) {
 }
 
 int main() {
-   vector<vector<string>> tickets = {{"ICN", "SFO"},
+  vector<vector<string>> tickets = {{"ICN", "SFO"},
                                     {"ICN", "ATL"},
                                     {"SFO", "ATL"},
                                     {"ATL", "ICN"},
