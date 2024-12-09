@@ -19,6 +19,7 @@ def find_max_occurred_alphabet(string):
         print(f"updated count_table_index : {count_table[index]}")
         print(f"max index : {max_index}")
         
+        # 저장 후 현재 최대 값인 인덱스보다 그 수가 클 경우 max_index 갱신
         if count_table[index] > count_table[max_index]:
             print(f"updated index : {index}")
             print(f"count_table_index : {count_table[index]}")
