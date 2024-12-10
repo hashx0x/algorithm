@@ -41,7 +41,7 @@ print(result)
 # 2,3으로 나누어 떨어지지 않았는데 6으로 나누어 떨어지는가?
 # 소인수분해를 생각해본다면, 모든 숫자는 소수의 거듭제곱으로 표현 가능 -> 소수로만 나누어떨어지는지 확인하면 된다.
 # 또한 n = a * b 라고하면 a <= root(n), b<=root(n) 이므로 root(n) 보다 작은 지점까지만 탐색하면된다.
-# 예를 들어 2
+
 
 def improved_list_prime_number(number):
     prime_number:list[int] = []
