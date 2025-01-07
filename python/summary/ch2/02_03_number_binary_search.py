@@ -1,5 +1,5 @@
 finding_target = 14
-finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] # 길이 16
+finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]  # 길이 16
 # 배열은 정렬이 되어있어야함.
 
 # r1 : cur_idx = 16, arr[cur_idx] > target
@@ -17,24 +17,25 @@ finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] # 길�
 # 1개가 남는다면
 # 1 = N/2^k ==> k = log_2(N) ==> O(log_2(N))
 
+
 def is_existing_target_number_binary(target, array):
     index_max = len(array) - 1
     index_min = 0
     index_mid = (index_max - index_min) // 2
-    
+
     if target == array[index_min] or target == array[index_max]:
         return True
-    
-        
-    while (index_min <= index_max):
+
+    while index_min <= index_max:
+        if target == array[index_mid]:
+            return True
         if target < array[index_mid]:
             index_max = index_mid - 1
         elif target > array[index_mid]:
             index_min = index_mid + 1
-        
-        index_mid 
-        
-    
+
+        index_mid = (index_max + index_min) // 2
+
     return False
 
 
