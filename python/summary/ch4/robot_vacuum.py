@@ -66,7 +66,7 @@ def get_count_cleaned_block(r: int, c: int, d: int, map: list[list[int]]):
 
         # 주변 4칸 중 청소되지 않은 빈 칸이 없는 경우
         is_near_all_cleaned = True
-        dir_now = cur_d  # 반시계방향으로 탐색
+        dir_now = cur_d  # 현재 방향 정보 담고, 아래에서 반시계방향으로 탐색
         for _ in range(4):
             dir_now = (dir_now - 1) % 4
             next_r = cur_r + d_r[dir_now]
@@ -164,3 +164,20 @@ current_room_map4 = [
 print(
     "정답 = 25 / 현재 풀이 값 = ", get_count_cleaned_block(6, 2, 0, current_room_map4)
 )
+
+
+# +alpha
+# 좌표가 주어졌을때 방향제어방법
+# 위 문제처럼 dr, dc 처럼 방향별 배열을 인덱스 기준으로 맞춰 제어할 수도 있지만,
+# 벡터(튜플) 형태로 저장 후 제어도 가능하다.
+#
+# *** 방향을 (row 변화량, col 변화량) 튜플로 저장 ***
+# DIRECTIONS = [(-1, 0), (0, 1), (1, 0), (0, -1)]  # 북, 동, 남, 서
+#
+#  *** 방향을 딕셔너리로 정의 ***
+# DIRECTION_MAP = {
+#     "N": (-1, 0),
+#     "E": (0, 1),
+#     "S": (1, 0),
+#     "W": (0, -1),
+# }

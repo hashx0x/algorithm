@@ -26,12 +26,15 @@ class MaxHeap:
 
         length = len(self.items)
         cur_idx = 1
-
+        # 교환된 마지막요소 자리 찾아주기
         while cur_idx < length - 1:
+            # 자식값들과 크기 비교해가면서 교환
             left_child_idx = cur_idx * 2
             right_child_idx = cur_idx * 2 + 1
+            # 최대 값의 idx 를 일단 현재 idx 로 설정
             max_idx = cur_idx
 
+            # 자식노드 값들과 크기 비교 후 max_idx 업데이트
             if (
                 left_child_idx <= length - 1
                 and self.items[max_idx] < self.items[left_child_idx]
@@ -43,14 +46,17 @@ class MaxHeap:
             ):
                 max_idx = right_child_idx
 
+            # max idx 가 cur_idx 와 같은경우 -> 교환이 일어나지 않아도 되므로 현재 자리가 맞다. -> break
             if max_idx == cur_idx:
                 break
 
+            # 자리 교환
             self.items[cur_idx], self.items[max_idx] = (
                 self.items[max_idx],
                 self.items[cur_idx],
             )
 
+            # 다음 루프 위해 cur_idx 업데이트
             cur_idx = max_idx
 
         return root_node
