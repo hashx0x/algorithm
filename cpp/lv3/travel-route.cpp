@@ -59,8 +59,8 @@ vector<string> solution(vector<vector<string>> tickets) {
     if (!ticketGraph[current].empty()) {  // 아직 더 들어갈 곳이 있다면
       stack.push_back(ticketGraph[current].back());  // 스택에 요소추가
       ticketGraph[current].pop_back();               // 그래프에서는 pop
-    } else {                      // 이 요소가 마지막이라면
-      answer.push_back(current);  // answer에 요소추가
+    } else {                                         // 이 요소가 마지막이라면
+      answer.push_back(current);                     // answer에 요소추가
       stack.pop_back();
     }
   }
