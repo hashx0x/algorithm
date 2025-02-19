@@ -1,1 +1,4 @@
 알고리즘 : 자원을 적게 써서 빠른속도로 수행되는 프로그램을 만든다.
+
+cpp 코테용 비공식 헤더(std 에 비포함) : #include <bits/stdc++.h>
+<iostream>, <vector>, <algorithm>, <stack>, <queue>, <deque> 포함
